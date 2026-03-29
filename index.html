@@ -1,0 +1,709 @@
+<meta name="description"
+    content="english zone — Clases de inglés en Manta, Ecuador. Cursos para adolescentes y adultos hispanohablantes. Reserva tu clase gratis." />
+<meta property="og:title" content="english zone" />
+<meta property="og:description"
+    content="Clases online y presenciales para adolescentes y adultos en Manta, Ecuador. Reserva tu clase gratis en english zone." />
+<meta property="og:image" content="logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg-1: #f6f8fb;
+        --bg-2: #eef6ff;
+        --glass: rgba(255, 255, 255, 0.66);
+        --muted: #6b7280;
+        --text: #0b1220;
+        --accent1: #007aff;
+        --accent2: #ff375f;
+        --accent-grad: linear-gradient(135deg, var(--accent2), var(--accent1));
+        --card-radius: 20px;
+        --soft-shadow: 0 10px 30px rgba(12, 20, 30, 0.08);
+        --smooth-ease: cubic-bezier(.2, .9, .3, 1);
+        --max-width: 1100px;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
+
+    html,
+    body {
+        height: 100%
+    }
+
+    body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.45;
+        overflow-x: hidden;
+    }
+
+    header {
+        position: fixed;
+        inset: 0 0 auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 22px;
+        gap: 12px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.57));
+        backdrop-filter: blur(12px) saturate(120%);
+        border-bottom: 1px solid rgba(11, 18, 32, 0.06);
+        z-index: 1200;
+        transition: backdrop-filter .35s var(--smooth-ease), background .35s var(--smooth-ease);
+    }
+
+    header .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px
+    }
+
+    header h2 {
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        font-size: 1.05rem;
+        text-transform: none;
+        color: var(--text);
+    }
+
+    nav {
+        display: flex;
+        gap: 10px;
+        align-items: center
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+        padding: 8px 10px;
+        border-radius: 10px;
+        transition: background .18s var(--smooth-ease), transform .18s var(--smooth-ease);
+    }
+
+    nav a:hover {
+        background: rgba(0, 122, 255, 0.06);
+        transform: translateY(-3px)
+    }
+
+    nav a:focus {
+        outline: 3px solid rgba(0, 122, 255, 0.12);
+        border-radius: 8px
+    }
+
+    .nav-toggle {
+        display: none;
+        background: transparent;
+        border: 0;
+        font-size: 1.6rem;
+        padding: 6px
+    }
+
+    .promo {
+        position: fixed;
+        top: 68px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        background: var(--accent-grad);
+        color: white;
+        padding: 8px 12px;
+        font-weight: 700;
+        border-radius: 999px;
+        z-index: 1190;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        transition: transform .28s var(--smooth-ease), opacity .28s var(--smooth-ease);
+    }
+
+    .hero {
+        min-height: calc(100vh - 140px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 60px;
+        position: relative;
+        gap: 14px;
+    }
+
+    .hero .hero-logo img {
+        width: 220px;
+        height: auto;
+        border-radius: 22px;
+        box-shadow: 0 18px 40px rgba(12, 20, 30, 0.08);
+        transition: transform .42s var(--smooth-ease), box-shadow .42s var(--smooth-ease);
+        will-change: transform;
+    }
+
+    .hero .hero-logo img:hover {
+        transform: translateY(-6px) scale(1.02)
+    }
+
+    .hero h2 {
+        margin-top: 6px;
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .hero p.lead {
+        max-width: 720px;
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin: 12px 0;
+    }
+
+    .btn {
+        margin-top: 6px;
+        background: var(--accent-grad);
+        padding: 12px 26px;
+        border-radius: 999px;
+        border: none;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 12px 30px rgba(0, 122, 255, 0.12);
+        transition: transform .2s var(--smooth-ease), box-shadow .2s var(--smooth-ease);
+    }
+
+    .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(0, 122, 255, 0.14)
+    }
+
+    section {
+        padding: 78px 18px;
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    section h2 {
+        text-align: center;
+        margin-bottom: 26px;
+        font-size: 1.4rem;
+        color: var(--text)
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        align-items: start;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.66);
+        backdrop-filter: blur(10px) saturate(120%);
+        border-radius: var(--card-radius);
+        padding: 18px;
+        text-align: center;
+        box-shadow: var(--soft-shadow);
+        transition: transform .36s var(--smooth-ease), box-shadow .36s var(--smooth-ease);
+        cursor: default;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.01);
+        box-shadow: 0 26px 50px rgba(12, 20, 30, 0.08)
+    }
+
+    .card:active {
+        transform: translateY(-6px) scale(1.005)
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 14px;
+        margin-bottom: 12px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .badge {
+        display: inline-block;
+        background: linear-gradient(90deg, var(--accent2), var(--accent1));
+        color: white;
+        padding: 6px 10px;
+        border-radius: 12px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    #teachers .card img {
+        width: 40%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        border-radius: 16px;
+        margin: 0 auto 12px;
+        display: block;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        transition: transform .28s var(--smooth-ease);
+    }
+
+    #teachers .card img:hover {
+        transform: translateY(-6px) scale(1.03)
+    }
+
+    #booking-box {
+        max-width: 420px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px) saturate(120%);
+        padding: 18px;
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(12, 20, 30, 0.06);
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 12px 14px;
+        margin: 10px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(11, 18, 32, 0.06);
+        font-size: 1rem;
+        background: white;
+        transition: box-shadow .16s ease, border-color .16s ease;
+    }
+
+    input:focus,
+    select:focus {
+        outline: none;
+        box-shadow: 0 6px 20px rgba(0, 122, 255, 0.08);
+        border-color: rgba(0, 122, 255, 0.22);
+    }
+
+    .shape {
+        position: absolute;
+        opacity: 0.2;
+        font-size: 56px;
+        pointer-events: none;
+        animation: float-slow 9s infinite ease-in-out;
+        transform-origin: center;
+        filter: drop-shadow(0 6px 12px rgba(12, 20, 30, 0.04));
+    }
+
+    .shape1 {
+        top: 18%;
+        left: 8%
+    }
+
+    .shape2 {
+        top: 62%;
+        right: 10%;
+        animation-delay: 2s
+    }
+
+    .shape3 {
+        bottom: 18%;
+        left: 38%;
+        animation-delay: 4s
+    }
+
+    @keyframes float-slow {
+        0% {
+            transform: translateY(0) rotate(0deg)
+        }
+
+        50% {
+            transform: translateY(-22px) rotate(2deg)
+        }
+
+        100% {
+            transform: translateY(0) rotate(0deg)
+        }
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+        background: #25D366;
+        color: white;
+        padding: 14px;
+        border-radius: 50%;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        z-index: 1300;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+        transition: transform .18s var(--smooth-ease), box-shadow .18s var(--smooth-ease);
+    }
+
+    .whatsapp-float:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16)
+    }
+
+    .circle {
+        position: fixed;
+        border-radius: 50%;
+        opacity: 0.18;
+        filter: blur(12px);
+        animation: float-slow 12s infinite ease-in-out;
+        z-index: 0
+    }
+
+    .circle1 {
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(circle, #4da6ff, transparent);
+        top: 18%;
+        left: 6%
+    }
+
+    .circle2 {
+        width: 260px;
+        height: 260px;
+        background: radial-gradient(circle, #ff4d5a, transparent);
+        bottom: 14%;
+        right: 10%;
+        animation-delay: 3s
+    }
+
+    .circle3 {
+        width: 140px;
+        height: 140px;
+        background: radial-gradient(circle, #ffd06b, transparent);
+        top: 6%;
+        right: 18%;
+        animation-delay: 5s
+    }
+
+    #contacto img {
+        width: 40px;
+        height: 40px;
+        transition: transform .18s var(--smooth-ease)
+    }
+
+    #contacto a:hover img {
+        transform: translateY(-4px) scale(1.06)
+    }
+
+    @media (max-width:900px) {
+
+        .shape,
+        .circle {
+            display: none
+        }
+
+        .promo {
+            top: 76px;
+            font-size: 0.95rem
+        }
+
+        .hero h2 {
+            font-size: 2rem
+        }
+    }
+
+    @media (max-width:640px) {
+        nav {
+            display: none
+        }
+
+        .nav-toggle {
+            display: inline-block
+        }
+
+        header {
+            gap: 8px
+        }
+
+        .promo {
+            top: 110px
+        }
+
+        .hero {
+            padding-top: 160px
+        }
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 64px;
+        right: 12px;
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 12px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+        padding: 8px;
+        z-index: 1250
+    }
+
+    .mobile-nav a {
+        display: block;
+        padding: 8px 12px;
+        margin: 4px 0;
+        border-radius: 8px
+    }
+
+    .sr-only {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .shape,
+        .circle,
+        .hero .hero-logo img,
+        .card,
+        .whatsapp-float {
+            animation: none;
+            transition: none
+        }
+    }
+</style>
+
+<nav role="navigation" aria-label="Navegación principal" id="main-nav">
+    <a href="#cursos">Cursos</a>
+    <a href="#booking">Reservar</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<button class="nav-toggle" id="navToggle" aria-controls="mobileNav" aria-expanded="false"
+    aria-label="Abrir menú">☰</button>
+
+<div class="mobile-nav" id="mobileNav" role="menu" aria-hidden="true">
+    <a href="#cursos" role="menuitem">Cursos</a>
+    <a href="#booking" role="menuitem">Reservar</a>
+    <a href="#contacto" role="menuitem">Contacto</a>
+</div>
+</header>
+
+<div class="promo" role="region" aria-live="polite">
+    🔥 20% OFF en todos los cursos hasta finales de mayo — Para adolescentes y adultos hispanohablantes en Manta 🔥
+</div>
+
+<main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="shape shape1" aria-hidden="true">📚</div>
+        <div class="shape shape2" aria-hidden="true">📝</div>
+        <div class="shape shape3" aria-hidden="true">🎓</div>
+
+        <div class="hero-logo" aria-hidden="false">
+            <img src="logo.png" alt="english zone logo" width="220" loading="lazy" decoding="async">
+        </div>
+
+        <h2 id="hero-title">Aprende Inglés con Confianza</h2>
+        <p class="lead">english zone es la academia en Manta, Ecuador, especializada en adolescentes y adultos
+            hispanohablantes. Reserva tu clase GRATIS — online o presencial — y evalúa tu nivel con nuestros
+            profesores certificados.</p>
+        <p style="color:var(--muted)">Clases diseñadas para jóvenes y adultos que quieren resultados reales.</p>
+        <button class="btn" onclick="goToBooking()" aria-haspopup="true">Reservar Clase GRATIS</button>
+    </section>
+
+    <section id="cursos" aria-labelledby="cursos-title">
+        <h2 id="cursos-title">Cursos</h2>
+        <div class="grid" role="list">
+            <article class="card" role="listitem" aria-label="English Montessori">
+                <img src="kids-montessori.jpg" alt="Niños aprendiendo con English Montessori" loading="lazy"
+                    decoding="async">
+                <div class="badge">6-10</div>
+                <h3>English Montessori</h3>
+                <p>Fines de semana con profesora especializada</p>
+            </article>
+
+            <article class="card" role="listitem" aria-label="Teenagers Online">
+                <img src="teens-online.jpg" alt="Clase online para adolescentes" loading="lazy" decoding="async">
+                <div class="badge">10-16 Online</div>
+                <h3>Teenagers Online</h3>
+            </article>
+
+            <article class="card" role="listitem" aria-label="Adults Online">
+                <img src="adults-online.jpg" alt="Adultos en clase online" loading="lazy" decoding="async">
+                <div class="badge">17+ Online</div>
+                <h3>Adults Online</h3>
+            </article>
+
+            <article class="card" role="listitem" aria-label="Teenagers In Person">
+                <img src="teens-presencial.jpg" alt="Clase presencial para adolescentes" loading="lazy"
+                    decoding="async">
+                <div class="badge">10-16 Presencial</div>
+                <h3>Teenagers In Person</h3>
+            </article>
+
+            <article class="card" role="listitem" aria-label="Adults In Person">
+                <img src="adults-presencial.jpg" alt="Adultos en clase presencial" loading="lazy" decoding="async">
+                <div class="badge">17+ Presencial</div>
+                <h3>Adults In Person</h3>
+            </article>
+        </div>
+    </section>
+
+    <section id="teachers" aria-labelledby="teachers-title">
+        <h2 id="teachers-title">Nuestros Profesores</h2>
+        <div class="grid" role="list">
+            <article class="card" role="listitem" aria-label="Teacher 1">
+                <img src="teacher1.jpg" alt="Teacher 1 - especialista en niños" loading="lazy" decoding="async">
+                <h3>Teacher 1</h3>
+                <p>Especialista en niños</p>
+            </article>
+
+            <article class="card" role="listitem" aria-label="Teacher 2">
+                <img src="teacher2.jpg" alt="Teacher 2 - especialista en adultos" loading="lazy" decoding="async">
+                <h3>Teacher 2</h3>
+                <p>Especialista en adultos</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="booking" aria-labelledby="booking-title">
+        <h2 id="booking-title">Reserva tu Clase GRATIS</h2>
+        <div id="booking-box" role="form" aria-label="Reservar clase">
+            <label for="name" class="sr-only">Tu nombre</label>
+            <input type="text" id="name" placeholder="Tu nombre" autocomplete="name" required>
+
+            <label for="level" class="sr-only">Nivel</label>
+            <input type="text" id="level" placeholder="Nivel (ej. Básico / Intermedio / Avanzado)" autocomplete="off">
+
+            <label for="type" class="sr-only">Tipo</label>
+            <select id="type" aria-label="Tipo de clase">
+                <option>Online</option>
+                <option>Presencial</option>
+            </select>
+
+            <label for="date" class="sr-only">Fecha</label>
+            <input type="date" id="date" aria-label="Fecha preferida">
+
+            <label for="time" class="sr-only">Hora</label>
+            <input type="time" id="time" aria-label="Hora preferida">
+
+            <button class="btn" id="bookBtn" onclick="bookClass()">Reservar</button>
+
+            <p id="booking-feedback" aria-live="polite" style="color:var(--muted);font-size:0.95rem;margin-top:8px"></p>
+        </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-title">
+        <h2 id="contacto-title">Contacto</h2>
+        <p style="text-align:center;color:var(--muted)">📱 +593958746138</p>
+
+        <p style="text-align:center">
+            <a href="https://instagram.com/https://www.instagram.com/english_manta?igsh=MXE2ZjNmZmszMnoydw%3D%3D&utm_source=qr"
+                target="_blank" rel="noopener noreferrer" aria-label="Instagram de English Zone">
+                <img src="instagram-logo.png" alt="Instagram logo" loading="lazy" decoding="async">
+            </a>
+
+            <a href="https://wa.me/593958746138?text=Hi%21%20I%20want%20info" target="_blank" rel="noopener noreferrer"
+                aria-label="WhatsApp de English Zone" style="margin-left:10px">
+                <img src="whatsapp-logo.png" alt="WhatsApp logo" loading="lazy" decoding="async">
+            </a>
+        </p>
+    </section>
+</main>
+
+<a href="https://wa.me/593958746138?text=Hi%21%20I%20want%20info" target="_blank" class="whatsapp-float"
+    onclick="trackWhatsAppClick()" aria-label="Contactar por WhatsApp" rel="noopener">💬</a>
+
+<div class="shape" style="top:10%; right:20%; font-size:50px;" aria-hidden="true">🇺🇸</div>
+<div class="shape" style="bottom:15%; right:30%; font-size:50px; animation-delay:3s;" aria-hidden="true">🇬🇧</div>
+
+<div class="circle circle1" aria-hidden="true"></div>
+<div class="circle circle2" aria-hidden="true"></div>
+<div class="circle circle3" aria-hidden="true"></div>
+
+<script>
+    try { document.documentElement.style.scrollBehavior = 'smooth'; } catch (e) { }
+
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            mobileNav.style.display = expanded ? 'none' : 'block';
+            mobileNav.setAttribute('aria-hidden', String(expanded));
+            if (!expanded) {
+                mobileNav.animate([{ transform: 'translateY(-6px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }], { duration: 240, easing: 'cubic-bezier(.2,.9,.3,1)' });
+            }
+        });
+        mobileNav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                mobileNav.style.display = 'none';
+                navToggle.setAttribute('aria-expanded', 'false');
+                mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+    }
+
+    function goToBooking() {
+        const booking = document.getElementById('booking');
+        if (booking) {
+            booking.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => {
+                const nm = document.getElementById('name');
+                if (nm) nm.focus({ preventScroll: false });
+            }, 420);
+        }
+    }
+
+    function bookClass() {
+        let name = document.getElementById('name').value.trim();
+        let level = document.getElementById('level').value.trim();
+        let type = document.getElementById('type').value;
+        let date = document.getElementById('date').value;
+        let time = document.getElementById('time').value;
+
+        const feedback = document.getElementById('booking-feedback');
+        if (!name) {
+            feedback.textContent = 'Por favor ingresa tu nombre.';
+            document.getElementById('name').focus();
+            return;
+        }
+
+        let number = "593958746138";
+        let source = "web_reserva_english_zone_manta";
+        let message = `Hola, quiero reservar clase:\nNombre: ${name}\nNivel: ${level}\nTipo: ${type}\nFecha: ${date}\nHora: ${time}\n(origen:${source})`;
+        const waUrl = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+
+        try {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'reserve_click', bookingName: name, bookingType: type });
+        } catch (e) { }
+
+        feedback.textContent = 'Abriendo WhatsApp...';
+        setTimeout(() => { window.open(waUrl, '_blank'); }, 250);
+        setTimeout(() => { feedback.textContent = ''; }, 5000);
+    }
+
+    function trackWhatsAppClick() {
+        console.log("WhatsApp button clicked");
+        try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'whatsapp_click' }); } catch (e) { }
+    }
+
+    document.querySelectorAll('.card').forEach(card => {
+        card.tabIndex = 0;
+        card.addEventListener('click', (e) => {
+            if (e.target.tagName.toLowerCase() === 'a' || e.target.closest('a')) return;
+            const title = card.querySelector('h3') ? card.querySelector('h3').textContent : 'card';
+            try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'card_click', card: title }); } catch (e) { }
+            card.animate([{ transform: 'translateY(-6px)' }, { transform: 'translateY(0)' }], { duration: 260, easing: 'cubic-bezier(.2,.9,.3,1)' });
+        });
+        card.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); this.click(); } });
+    });
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (reduced.matches) document.documentElement.classList.add('reduced-motion');
+
+    window.addEventListener('load', function () { });
+</script>
